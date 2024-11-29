@@ -3,11 +3,11 @@ name: CI/CD Pipeline for React App
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
-    runs-on: ubuntu-latest #boo
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
