@@ -1,38 +1,17 @@
-# Use the official Node.js image
-FROM node:20.14.0 AS build
+# Use an official Nginx image as a base image
+FROM nginx:alpine
 
-# Set the working directory
-WORKDIR /app
+# Install Certbot and Nginx plugin for Certbot
+RUN apk update && apk add --no-cache certbot certbot-nginx
 
-# Clean the npm cache
-RUN npm cache clean --force
+# Copy your custom Nginx config from the project root
+COPY nginx.conf /etc/nginx/nginx.conf
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Copy the static web assets (adjust this as per your app's build output)
+COPY ./build /usr/share/nginx/html
 
-# Install dependencies
-RUN npm install --legacy-peer-deps
+# Expose ports 80 (HTTP) and 443 (HTTPS)
+EXPOSE 80 443
 
-# Copy the rest of your app's source code
-COPY . .
-
-# Build the React app
-RUN npm run build
-
-# Use a lightweight image to serve the app
-FROM node:20.14.0
-
-# Set the working directory
-WORKDIR /app
-
-# Copy the build output from the previous stage
-COPY --from=build /app/build ./build
-
-# Install serve globally
-RUN npm install -g serve
-
-# Expose port 80
-EXPOSE 81
-
-# Command to run the app
-CMD ["serve", "-s", "build", "-l", "81"]
+# Command to start Nginx and Certbot
+CMD ["sh", "-c", "nginx -g 'daemon off;'"]
