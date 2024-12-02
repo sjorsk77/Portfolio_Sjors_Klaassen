@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      - name: Install babel
+        run: npm install --save-dev @babel/plugin-proposal-private-property-in-object
+
       - name: Build the React app
         run: npm run build
 
@@ -38,57 +41,25 @@ jobs:
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
-        
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
-  
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-  
-      - name: Set up SSH keys for server access
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-  
-      - name: Deploy Docker container
+      - name: SSH into Server and Deploy
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            # Stop and remove any existing containers
+            # Pull the latest Docker image
+            docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
+            
+            # Stop and remove the old container if it exists
             docker stop portfolio || true
             docker rm portfolio || true
             
-            # Pull the latest Docker image (adjust the image name)
-            docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
-            
-            # Run the new Docker container
-            docker run -d -p 80:80 -p 443:443 --name portfolio ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
-  
-      - name: Install Certbot and obtain SSL certificates
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            # Install Certbot and the Nginx plugin for Certbot
-            sudo apt update
-            sudo apt install -y certbot python3-certbot-nginx
-            
-            # Obtain the SSL certificate from Let's Encrypt using the nginx plugin
-            sudo certbot --nginx -d sjorsklaassen.nl -d www.sjorsklaassen.nl --non-interactive --agree-tos -m sjors.klaassen@gmail.com
-            
-            # Set up auto-renewal of certificates
-            sudo systemctl enable certbot.timer
-  
-      - name: Verify Deployment
-        run: |
-          # Check that the server is running and SSL certificates are correctly configured
-          curl -I https://sjorsklaassen.nl
+            # Run the new container
+            docker run -d -p 80:80 --name portfolio ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
