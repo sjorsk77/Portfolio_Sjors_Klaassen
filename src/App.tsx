@@ -7,7 +7,6 @@ import {NavBar} from "./Components/NavBar";
 import {Footer} from "./Components/Footer";
 import {ThemeProvider} from "./Components/ThemeContext";
 import {Contact} from "./Pages/Contact";
-import {Projects} from "./Pages/Projects";
 import {About} from "./Pages/About";
 
 const App: React.FC = () => {
@@ -20,7 +19,6 @@ const App: React.FC = () => {
                       <Routes>
                           <Route path="/" element={<Home />} />
                             <Route path="/about" element={<About/>} />
-                            <Route path="/projects" element={<Projects/>} />
                             <Route path="/contact" element={<Contact/>} />
                           <Route path="*" element={<PageNotFound />} />
                       </Routes>

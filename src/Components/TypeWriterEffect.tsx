@@ -1,9 +1,12 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-export const TypewriterEffect = () => {
-    const [text, setText] = useState(""); // Initial state is an empty string
-    const fullText = "Hey, I'm Sjors"; // Text to be typed out
-    const typingSpeed = 100; // Speed of typing in milliseconds
+interface Props {
+    input: string;
+    typingSpeed: number;
+}
+
+export const TypewriterEffect: React.FC<Props> = ({ input, typingSpeed }) => {
+    const [text, settext] = useState("");
     const [isFinished, setIsFinished] = useState(false); // Track typing completion
 
     const iRef = useRef(0);
@@ -11,21 +14,21 @@ export const TypewriterEffect = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             // Get the current value of i from the ref
-            const currentChar = fullText[iRef.current];
-            setText((prevText) => prevText + currentChar);
+            const currentChar = input[iRef.current];
+            settext((prevText) => prevText + currentChar);
 
             // Increment iRef
             iRef.current += 1;
 
             // Stop typing when we've finished typing the full text
-            if (iRef.current === fullText.length) {
+            if (iRef.current === input.length) {
                 clearInterval(intervalId);
                 setIsFinished(true); // Set typing as finished
             }
         }, typingSpeed);
 
         return () => clearInterval(intervalId); // Cleanup interval on unmount
-    }, []);
+    }, [input]);
 
     return (
         <div className="flex justify-center items-center bg-none">

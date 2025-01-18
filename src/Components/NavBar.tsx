@@ -16,7 +16,7 @@ export const NavBar: React.FC = () => {
             <div className="w-full flex flex-row justify-between items-center py-5 px-6">
                 {/* Logo */}
                 <div className="flex items-center">
-                    <p className="font-bold font-mono">Sjors&nbsp;Klaassen</p>
+                    <p className="font-bold font-mono">Thijs&nbsp;Vos</p>
                 </div>
 
                 {/* Desktop Navigation Links */}
@@ -25,10 +25,7 @@ export const NavBar: React.FC = () => {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/projects">Projects</Link>
+                        <Link to="/about">Over mij</Link>
                     </li>
                     <li>
                         <Link to="/contact">Contact</Link>
