@@ -9,7 +9,10 @@ module.exports = {
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
         'orbitron': ['Orbitron', 'sans-serif'],
-      }
+      },
+      maxWidth: {
+        '2/5': '40%',
+      },
     },
   },
   plugins: [],

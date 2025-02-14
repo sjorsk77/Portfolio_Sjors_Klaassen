@@ -32,16 +32,87 @@ main > div {
   @keyframes fadeUp {
     0% {
       opacity: 0;
-      transform: translateY(50px); /* Starts 20px below */
+      transform: translateY(50px);
     }
     100% {
       opacity: 1;
-      transform: translateY(0); /* Ends at normal position */
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes wiggle {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    75% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes stretchX {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes flip {
+    0% {
+      transform: perspective(500px) rotateY(0deg); /* Start with no rotation */
+    }
+    50% {
+      transform: perspective(500px) rotateY(180deg); /* Flip to 180 degrees */
+    }
+    100% {
+      transform: perspective(500px) rotateY(360deg); /* Complete the flip to 360 degrees */
+    }
+  }
+
+  @keyframes grow {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
     }
   }
 
   .fade-up {
-    animation: fadeUp 1s ease-out; /* 1s duration and ease-out timing */
+    animation: fadeUp 1s ease-in-out forwards; /* 1s duration and ease-out timing */
+  }
+
+  .stretch-x {
+      animation: stretchX 1s ease-in-out forwards;
+  }
+
+  .flip {
+      animation: flip 1s ease-in-out;
+  }
+
+  .contact-form-container {
+    animation: grow 0.3s ease-in-out;
+    transform-origin: center;
+  }
+
+  .growY {
+    animation: grow 0.3s ease-in-out;
+    transform-origin: bottom;
+  }
+
+  .wiggle {
+    animation: wiggle 0.5s ease-in-out infinite;
   }
 }
+
 
