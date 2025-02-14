@@ -3,8 +3,8 @@ import {TypeWriterText, HomeText} from "../Text/HomeText";
 
 export const Home: React.FC = () => {
     return (
-        <div className="flex flex-col justify-center items-center gap-y-24">
-            <div className="flex flex-row flex-x-grow justify-around items-center md:gap-x-80 md:px-40">
+        <div className="flex flex-col justify-center items-center gap-y-24 mx-80">
+            <div className="flex flex-row flex-x-grow justify-around items-center gap-x-20">
                 <div className="flex flex-col items-center justify-center">
                     <div className="w-full flex">
                         <TypewriterEffect input={TypeWriterText} typingSpeed={100}/>

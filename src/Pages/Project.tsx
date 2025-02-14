@@ -4,6 +4,10 @@ import {ProjectsDetails} from "../Text/ProjectsText";
 import {ProjectDetails} from "../Components/Project/ProjectDetails";
 import {ProjectHeader} from "../Components/Project/ProjectHeader";
 import {ProjectDetailList} from "../Components/Project/DetailsList";
+import {Timeline, Text} from "@mantine/core";
+import {FaClock, FaFlagCheckered} from "react-icons/fa";
+import {FcStart} from "react-icons/fc";
+import {MdOutlineNotStarted, MdStart} from "react-icons/md";
 
 
 export const Project: React.FC = () => {
@@ -19,24 +23,22 @@ export const Project: React.FC = () => {
     }
 
     return (
-        <div
-            className=" "
-            style={{
-                backgroundImage: `url(${project.thumbnail})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
-        >
-            <div className="absolute inset-0  bg-opacity-70"></div>
-            <div className="relative z-10 p-8 max-w-4xl mx-auto">
-                <ProjectHeader title={project.title} description={project.description} />
-                <ProjectDetails
-                    startDate={project.startDate}
-                    endDate={project.endDate}
-                    skillIds={project.skillIds}
-                />
+        <div className='min-h-screen'>
+            <ProjectHeader title={project.title} description={project.description}/>
+            <div className="h-full">
 
+
+            <Timeline active={2} bulletSize={64} lineWidth={6} style={{ flex: 1}}>
+                <Timeline.Item bullet={<MdOutlineNotStarted size={32}/>} title="Project start">
+                    <Text size="xs" mt={4}>{project.startDate}</Text>
+                </Timeline.Item>
+                <Timeline.Item bullet={<FaFlagCheckered size={32}/>} title="Project finished" style={{ flex: 1 }}>
+                    <Text size="xs" mt={4}>{project.endDate}</Text>
+                </Timeline.Item>
+            </Timeline>
             </div>
+
+
         </div>
     );
 };

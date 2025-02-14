@@ -7,6 +7,8 @@ import { Footer } from './Components/Footer';
 import { ThemeProvider } from './Components/ThemeContext';
 import { pages } from './Data/Pages';
 import {ContactButton} from "./Components/Contact/ContactButton";
+import '@mantine/core/styles.css';
+import '@mantine/charts/styles.css';
 
 const App: React.FC = () => {
 

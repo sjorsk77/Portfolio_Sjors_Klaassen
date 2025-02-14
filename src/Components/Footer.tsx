@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
                 <EmailIcon/>
                 <PhoneIcon/>
             </div>
-            <p className="text-sm opacity-50">Copyright © 2025 - Sjors Klaassen</p>
+            <p className="text-sm opacity-50">Copyright © {new Date().getFullYear()} - Sjors Klaassen</p>
         </footer>
     );
 }
