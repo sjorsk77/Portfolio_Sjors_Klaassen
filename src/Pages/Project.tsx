@@ -1,13 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import {ProjectsDetails} from "../Text/ProjectsText";
-import {ProjectDetails} from "../Components/Project/ProjectDetails";
 import {ProjectHeader} from "../Components/Project/ProjectHeader";
-import {ProjectDetailList} from "../Components/Project/DetailsList";
 import {Timeline, Text} from "@mantine/core";
-import {FaClock, FaFlagCheckered} from "react-icons/fa";
-import {FcStart} from "react-icons/fc";
-import {MdOutlineNotStarted, MdStart} from "react-icons/md";
+import {FaFlagCheckered} from "react-icons/fa";
+import {MdOutlineNotStarted} from "react-icons/md";
+import {PageContainer} from "../Pages/PageContainer";
+import {ProjectDescription} from "../Components/Project/ProjectDescription";
 
 
 export const Project: React.FC = () => {
@@ -23,8 +22,9 @@ export const Project: React.FC = () => {
     }
 
     return (
-        <div className='min-h-screen'>
-            <ProjectHeader title={project.title} description={project.description}/>
+        <PageContainer>
+            <ProjectHeader title={project.title}/>
+            <ProjectDescription description={project.description}/>
             <div className="h-full">
 
 
@@ -39,6 +39,6 @@ export const Project: React.FC = () => {
             </div>
 
 
-        </div>
+        </PageContainer>
     );
 };

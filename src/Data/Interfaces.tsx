@@ -1,7 +1,5 @@
 import {IconType} from "react-icons";
 import {SkillType} from "./Enums";
-
-
 export interface PageProps {
     path: string;
     component: JSX.Element;

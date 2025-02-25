@@ -18,7 +18,6 @@ const App: React.FC = () => {
             <ThemeProvider>
                 <Router>
                     <NavBar />
-                    <div className='flex-grow flex'>
                         <Suspense fallback={<div>Loading...</div>}>
                             <Routes>
                                 {pages.map((page) => (
@@ -26,7 +25,6 @@ const App: React.FC = () => {
                                 ))}
                             </Routes>
                         </Suspense>
-                    </div>
                     <ContactButton />
                     <Footer />
                 </Router>

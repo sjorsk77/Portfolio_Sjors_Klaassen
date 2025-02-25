@@ -29,10 +29,10 @@ export const NavBar: React.FC = () => {
 
     return (
         <nav>
-            <div className="w-full flex flex-row justify-between items-center py-5 md:px-6">
+            <div className="w-full flex flex-row justify-between items-center h-[var(--navbar-height)] py-5 md:px-6">
                 {/* Logo */}
                 <div className="flex items-center">
-                    <p className="font-bold font-mono">Sjors&nbsp;Klaasen</p>
+                    <p className="font-bold font-mono">Sjors&nbsp;Klaassen</p>
                 </div>
 
                 {/* Desktop Navigation Links */}
