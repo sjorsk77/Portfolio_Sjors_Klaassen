@@ -6,6 +6,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
+:root {
+  --navbar-height: 64px;
+  --footer-height: 56px;
+}
 
 body {
   margin: 0;
@@ -92,8 +96,16 @@ main > div {
     animation: fadeUp 1s ease-in-out forwards; /* 1s duration and ease-out timing */
   }
 
-  .stretch-x {
+  .stretch-x-center {
       animation: stretchX 1s ease-in-out forwards;
+  }
+  .stretch-x-left {
+    animation: stretchX 1s ease-in-out forwards ;
+    transform-origin: left;
+  }
+  .stretch-x-right {
+    animation: stretchX 1s ease-in-out forwards;
+    transform-origin: right;
   }
 
   .flip {

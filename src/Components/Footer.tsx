@@ -4,7 +4,7 @@ import {EmailIcon, PhoneIcon} from "./Socials";
 
 export const Footer: React.FC = () => {
     return (
-        <footer className='mb-5 flex flex-col justify-center items-center gap-3'>
+        <footer className='mb-5 flex flex-col justify-center items-center gap-3 h-[var(--footer-height)]'>
             <div className="flex flex-row gap-5">
                 <EmailIcon/>
                 <PhoneIcon/>

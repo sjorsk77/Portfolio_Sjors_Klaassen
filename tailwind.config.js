@@ -15,4 +15,7 @@ module.exports = {
       },
     },
   },
+  safelist: [
+    { pattern: /w-\[.*\]/ }, // Allow arbitrary width values
+  ],
 }

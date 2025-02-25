@@ -8,6 +8,7 @@ interface Project {
     title: string;
     thumbnail: string;
     description: string;
+    shortDescription: string;
 }
 
 interface ProjectCardProps {
@@ -24,7 +25,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             className="group relative block rounded-lg overflow-hidden"
         >
             <div
-                className="w-full bg-cover bg-center transition-transform h-64"
+                className=" bg-cover bg-center transition-transform h-64 w-96"
                 style={{
                     backgroundImage: `url(${project.thumbnail})`,
                 }}
@@ -39,7 +40,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     {/* Bottom div */}
                     <div
                         className="absolute bottom-0 dark:bg-gray-800 bg-gray-200 text-center gap-y-5 flex flex-col justify-center items-center h-full w-full p-5 transition-transform duration-300 translate-y-full group-hover:translate-y-0">
-                        {project.description}
+                        {project.shortDescription}
                         <p className="font-bold">Click to read more about this project</p>
                     </div>
                 </div>

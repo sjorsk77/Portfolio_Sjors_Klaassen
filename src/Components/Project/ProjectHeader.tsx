@@ -1,16 +1,13 @@
-interface ProjectHeaderProps {
-    title: string;
-    description: string;
-}
+import {StretchLine} from "../Misc/StretchLine";
 
-export const ProjectHeader: React.FC<ProjectHeaderProps> = ({
-                                                                title,
-                                                                description,
-                                                            }) => {
+interface props {
+    title: string;
+}
+export const ProjectHeader: React.FC<props> = ({title}) =>{
     return (
-        <>
-            <h1 className="text-4xl font-bold mb-4">{title}</h1>
-            <p className="text-lg mb-6">{description}</p>
-        </>
-    );
-};
+        <div className="flex flex-col items-center my-10">
+        <div className={"text-2xl font-extrabold mb-2"}>{title}</div>
+        <StretchLine width={150} widthMetric={"%"} thickness={3} speed={2} startAnimation={"left"} color={"#000000"}/>
+        </div>
+    )
+}
