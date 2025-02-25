@@ -20,7 +20,7 @@ export const SkillsDetails: React.FC = () => {
         <div className="mt-20">
             {Object.entries(groupedSkills).map(([skillType, skills], index) => (
                 <div key={skillType} className={`flex flex-col opacity-0 justify-center mb-20 fade-up`} style={{animationDelay: `${0.3 + (index * 0.6)}s`}}>
-                    <h2 className="text-2xl font-bold mb-5 text-center">{skillType}</h2>
+                    <h1 className="font-bold mb-5 text-center">{skillType}</h1>
                     <div className="md:w-96 w-full scale-x-0 h-1 mx-auto bg-current rounded-full mb-8 stretch-x" style={{animationDelay: `${1.2 + (index * 0.6)}s`}}></div>
                     <div className="flex flex-wrap justify-center gap-10">
                         {skills.map(skill => (

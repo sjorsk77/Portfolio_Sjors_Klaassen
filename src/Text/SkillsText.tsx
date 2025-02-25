@@ -5,14 +5,15 @@ import {SiDotnet, SiC, SiMysql, SiMariadb, SiJetbrains, SiSpring} from "react-ic
 import {AiOutlineCode} from "react-icons/ai";
 import {VscVscode} from "react-icons/vsc";
 import {TbBrandCSharp} from "react-icons/tb";
+import {PiFileCSharpBold} from "react-icons/pi";
 
-export const skillsIntroduction = "This page highlights the skills developed over the years in the tech industry, with experience in both frontend and backend development. Proficiency spans various programming languages, frameworks, and libraries, alongside solid knowledge of databases and CI/CD tools. There’s hands-on experience in developing web applications, mobile apps, and APIs, as well as working collaboratively in teams or independently on individual projects. Additionally, expertise includes applying different methodologies to effectively tackle diverse challenges in development.";
+export const skillsIntroduction = "On this page I showcase the skills I have developed throughout my learning path in software development. There are many tools and skills in the software development world, these are the ones I have experience with. I am always eager to learn new skills and work with new tools to improve my knowledge and experience. Below you can find a list of relevant skills I can safely say I do have enough experience with to use in a project. For each skill I will provide a short description of what it is and how I mainly use it.";
 
 export const skillsDetials: SkillsDetailsProps[] = [
     {
         id: 1,
         title: "React",
-        description: "React is a JavaScript library for building user interfaces. It allows developers to create reusable components that efficiently update when data changes. I use React to build the frontends for my web applications.",
+        description: "React is a JavaScript library for building front-end applications. I mainly use React as the framework for the front-end of my applications.",
         skillType: SkillType.Framework,
         icon: FaReact,
         bgColor: "bg-[#61DAFB]"
@@ -20,7 +21,7 @@ export const skillsDetials: SkillsDetailsProps[] = [
     {
         id: 2,
         title: "Node",
-        description: "Node.js is a platform that allows developers to run JavaScript on the server side. It's great for building fast and scalable applications, like websites and APIs. I use node.js to help me enhance my web applications with it's numerous libraries.",
+        description: "Node.js is a platform that allows developers to run JavaScript on the server side. I use node.js to help me enhance my web applications with it's numerous libraries.",
         skillType: SkillType.Framework,
         icon: FaNode,
         bgColor: "bg-[#8CC84B]"
@@ -28,7 +29,7 @@ export const skillsDetials: SkillsDetailsProps[] = [
     {
         id: 3,
         title: "Java",
-        description: "Java is a versatile and widely-used programming language known for its portability, stability, and scalability. It's commonly used for building large-scale enterprise applications, web services, and mobile applications. Java follows the principle of \"Write Once, Run Anywhere,\" allowing developers to create cross-platform applications. Java's strong security features and extensive community support contribute to its ongoing success in the tech industry.",
+        description: "Java is and widely-used object oriented programming language. I use Java for backend development such as API's.",
         skillType: SkillType.Language,
         icon: FaJava,
         bgColor: "bg-[#5283a2]"
@@ -36,7 +37,7 @@ export const skillsDetials: SkillsDetailsProps[] = [
     {
         id: 4,
         title: "JavaScript",
-        description: "JavaScript is a programming language used to create interactive web applications, running in the browser and essential for front-end development. TypeScript is a superset of JavaScript that adds static typing, improving code quality and maintainability. It compiles to JavaScript, making it suitable for both small and large projects. I primarily use TypeScript for front-end development, as it helps me catch errors early and write more robust code.",
+        description: "JavaScript is a programming language which runs in the browser. Javascript is necessary for front-end development. So I use it in all my front-end projects.",
         skillType: SkillType.Language,
         icon: FaJs,
         bgColor: "bg-[#F7DF1E]"
@@ -44,7 +45,7 @@ export const skillsDetials: SkillsDetailsProps[] = [
     {
         id: 9,
         title: "MySQL",
-        description: "MySQL is a popular open-source relational database management system. It uses Structured Query Language (SQL) to store, manage, and query data in tables. Known for its speed, reliability, and ease of use, MySQL is commonly used in web applications and backend systems. It supports a variety of data types and offers powerful features for data storage and retrieval.",
+        description: "MySQL is a popular open-source relational database management system. It uses SQL as its query language. I use MySQL for my databases in my projects.",
         skillType: SkillType.Database,
         icon: SiMysql,
         bgColor: "bg-[#00618A]"
@@ -52,7 +53,7 @@ export const skillsDetials: SkillsDetailsProps[] = [
     {
         id: 5,
         title: "GitHub",
-        description: "GitHub is a web-based platform for version control and collaboration, allowing developers to store, manage, and track changes to their code. It uses Git, a version control system, to help developers work on projects individually or in teams, managing different versions of code seamlessly. GitHub makes it easy to share code, collaborate on open-source projects, and review changes through pull requests. It also offers additional features like issue tracking, project management, and CI/CD integrations to streamline development workflows.",
+        description: "GitHub is a web-based platform for version control using Git. I use GitHub to store my repositories and deploy my projects.",
         skillType: SkillType.Tool,
         icon: FaGithub,
         bgColor: "bg-gray-300"
@@ -60,7 +61,7 @@ export const skillsDetials: SkillsDetailsProps[] = [
     {
         id: 6,
         title: "SpringBoot",
-        description: "Spring Boot is a framework that helps developers create Java applications quickly and easily. It simplifies the setup process by providing default configurations and tools. With SpringBoot, developers can build everything from simple web apps to complex, enterprise-level systems. I use SpringBoot whenever I create a backend using the Java programming language.",
+        description: "Spring Boot is a Java framework to build web applications. I use Spring Boot whenever I create a program using the Java.",
         skillType: SkillType.Framework,
         icon: SiSpring,
         bgColor: "bg-[#6DB33F]"
@@ -68,7 +69,7 @@ export const skillsDetials: SkillsDetailsProps[] = [
     {
         id: 7,
         title: "ASP.NET",
-        description: "ASP.NET is a framework for building web applications and APIs using the .NET platform. It allows developers to create dynamic websites and services with ease. It supports multiple programming languages, primarily C#, and can be used to build both small and large-scale applications. I use ASP.NET whenever I create a program using the C# programming language.",
+        description: "ASP.NET is a framework for building web applications using C#. I use ASP.NET whenever I create a program using the C# programming language.",
         skillType: SkillType.Framework,
         icon: SiDotnet,
         bgColor: "bg-gradient-to-r from-[#556cf5] to-[#ed63c1]"
@@ -76,15 +77,15 @@ export const skillsDetials: SkillsDetailsProps[] = [
     {
         id: 8,
         title: "C#",
-        description: "C# is a versatile programming language developed by Microsoft, commonly used for building Windows applications, web services, and games. It's part of the .NET framework and is known for its strong typing, object-oriented design, and ease of use. C# is popular in enterprise-level applications and cross-platform development with .NET Core.",
+        description: "C# is a versatile object oriented programming language developed by Microsoft. C# is my first programming language. I use C# for backend development. ",
         skillType: SkillType.Language,
-        icon: TbBrandCSharp,
+        icon: PiFileCSharpBold,
         bgColor: "bg-[#af4796]"
     },
     {
         id: 10,
         title: "Visual Studio Code",
-        description: "Visual Studio Code (VS Code) is a lightweight, open-source code editor developed by Microsoft. It supports a wide range of programming languages and comes with features like syntax highlighting, debugging tools, and IntelliSense (code completion). VS Code also allows for extensive customization through extensions, making it versatile for various development tasks. It's known for its speed, user-friendly interface, and integrated Git support, which makes it a popular choice for developers. Whether you're working on web, backend, or mobile development, VS Code provides a flexible environment to write and debug code efficiently.",
+        description: "Visual Studio Code (VS Code) is a lightweight, open-source code editor developed by Microsoft. I am using VS Code more often instead of other code editors because of it's flexibility.",
         skillType: SkillType.Tool,
         icon: VscVscode,
         bgColor: "bg-[#007ACC]"
@@ -92,7 +93,7 @@ export const skillsDetials: SkillsDetailsProps[] = [
     {
         id: 11,
         title: "JetBrains",
-        description: "JetBrains offers a range of powerful IDEs designed to improve the coding experience. Tools like IntelliJ IDEA, Rider, and WebStorm support different programming languages with features like code completion and debugging. These IDEs help developers write, test, and manage their code more efficiently. JetBrains is popular for its user-friendly interface and strong language-specific support, making it a top choice for many developers. I mainly use the JetBrains IDE's for my projects.",
+        description: "JetBrains offers a range of powerful IDEs designed to improve the coding experience. It helps a lot with learning new languages and frameworks. I use JetBrains when I am learning a new language or framework.",
         skillType: SkillType.Tool,
         icon: SiJetbrains,
         bgColor: "bg-gradient-to-r from-[#ff8c19] to-[#e600ff]"
@@ -100,7 +101,7 @@ export const skillsDetials: SkillsDetailsProps[] = [
     {
         id: 12,
         title: "MariaDB",
-        description: "MariaDB is an open-source relational database management system, created as a fork of MySQL. It offers similar features to MySQL, such as using SQL for data management, but is known for improved performance and additional features. MariaDB is highly compatible with MySQL, making it easy to switch between the two. It supports a wide range of storage engines and is often preferred for its speed and reliability.",
+        description: "MariaDB is an open-source relational database management system. Just like MySQL it uses SQL as it's query language. I sometimes use MariaDB as an alternative for MySQL.",
         skillType: SkillType.Database,
         icon: SiMariadb,
         bgColor: "bg-[#ba7257]"

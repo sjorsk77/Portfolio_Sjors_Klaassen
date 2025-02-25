@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useTheme } from "./ThemeContext";
 import { ThemeToggle } from "./ThemeToggle";
 import {pages} from "../Data/Pages";
-import {EmailIcon, PhoneIcon} from "./Socials";
+import {EmailIcon, LinkedInIcon, PhoneIcon} from "./Socials";
 
 export const NavBar: React.FC = () => {
     const { theme, toggleTheme } = useTheme();
@@ -96,6 +96,7 @@ export const NavBar: React.FC = () => {
                     <div className={"flex flex-row w-fit gap-5"}>
                         <PhoneIcon/>
                         <EmailIcon/>
+                        <LinkedInIcon/>
                     </div>
                     <ThemeToggle/>
                 </div>

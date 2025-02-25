@@ -1,4 +1,4 @@
-import {FaEnvelope, FaPhone} from "react-icons/fa";
+import {FaEnvelope, FaLinkedin, FaPhone} from "react-icons/fa";
 import React from "react";
 
 export const EmailIcon = () => {
@@ -15,6 +15,15 @@ export const PhoneIcon = () => {
         <a href="tel:+31650262327" target="_blank" rel="noopener noreferrer"
            className="flex items-center gap-2 hover:wiggle ">
             <FaPhone size={24}/>
+        </a>
+    )
+}
+
+export const LinkedInIcon = () => {
+    return (
+        <a href="https://www.linkedin.com/in/sjors-klaassen/" target="_blank" rel="noopener noreferrer"
+           className="flex items-center gap-2 hover:wiggle ">
+            <FaLinkedin size={24}/>
         </a>
     )
 }

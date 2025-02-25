@@ -1,6 +1,6 @@
 import React from "react";
 import {FaEnvelope, FaLinkedin, FaPhone} from "react-icons/fa";
-import {EmailIcon, PhoneIcon} from "./Socials";
+import {EmailIcon, LinkedInIcon, PhoneIcon} from "./Socials";
 
 export const Footer: React.FC = () => {
     return (
@@ -8,6 +8,7 @@ export const Footer: React.FC = () => {
             <div className="flex flex-row gap-5">
                 <EmailIcon/>
                 <PhoneIcon/>
+                <LinkedInIcon/>
             </div>
             <p className="text-sm opacity-50">Copyright © {new Date().getFullYear()} - Sjors Klaassen</p>
         </footer>

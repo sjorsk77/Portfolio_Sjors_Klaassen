@@ -22,7 +22,7 @@ export const SkillCard: React.FC<SkillsDetailsProps> = ({id, title, description,
             onClick={toggleExpand}
         >
             <div className="flex justify-between p-4 flex-row items-center gap-5">
-                <div className="font-bold text-gray-900 text-xl">{title}</div>
+                <h2 className="font-bold text-gray-900">{title}</h2>
                 <Icon size={32} className="text-gray-900"/>
             </div>
 

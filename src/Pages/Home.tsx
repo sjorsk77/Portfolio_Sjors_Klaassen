@@ -10,7 +10,7 @@ export const Home: React.FC = () => {
                     <div className="w-full flex">
                         <TypewriterEffect input={TypeWriterText} typingSpeed={100}/>
                     </div>
-                    <p className="mt-4 w-full text-left mb-3 text-xl">
+                    <p className="w-full text-left">
                         {HomeText}
                     </p>
 
