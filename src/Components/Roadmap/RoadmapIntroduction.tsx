@@ -10,7 +10,7 @@ export const RoadmapIntroduction: React.FC = () => {
                 <p className='text-xl'>{}</p>
             </div>
             {isMediumOrLarger && (
-                <img src='/assets/images/papimg.png' alt='placeholder' className="rounded-full h-64 fade-up" />
+                <img src='/assets/images/logot.png' alt='placeholder' className="rounded-full h-64 fade-up" />
             )}
         </div>
     );

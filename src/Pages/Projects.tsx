@@ -1,4 +1,4 @@
-import {ProjectsDetails, ProjectsIntroduction} from "../Text/ProjectsText";
+import {ProjectsDetails} from "../Text/ProjectsText";
 
 import React from "react";
 import {ProjectCard} from "../Components/Projects/ProjectCard";
