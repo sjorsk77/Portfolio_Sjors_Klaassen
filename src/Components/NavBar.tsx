@@ -53,7 +53,7 @@ export const NavBar: React.FC = () => {
 
                 {/* Burger Menu Button (for screens smaller than `md`) */}
                 <button
-                    className="md:hidden p-2 text-xl"
+                    className="md:hidden p-2 text-xl shadow-none bg-opacity-0 hover:bg-opacity-0"
                     onClick={toggleMenu}
                 >
                     <span className="block w-6 h-1 bg-black dark:bg-white mb-1"></span>
@@ -69,7 +69,7 @@ export const NavBar: React.FC = () => {
                 } w-3/4 md:hidden`}
             >
                 <button
-                    className="absolute top-4 right-4 text-4xl text-black dark:text-white"
+                    className="absolute top-4 right-4 text-4xl text-black dark:text-white shadow-none bg-opacity-0 hover:bg-opacity-0"
                     onClick={toggleMenu}
                 >
                     &times;
