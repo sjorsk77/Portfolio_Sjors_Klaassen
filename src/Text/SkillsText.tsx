@@ -1,7 +1,7 @@
 import {SkillsDetailsProps} from "../Data/Interfaces";
 import {FaCode, FaGithub, FaJava, FaJs, FaLeaf, FaNode, FaReact} from "react-icons/fa";
 import {SkillType} from "../Data/Enums";
-import {SiDotnet, SiC, SiMysql, SiMariadb, SiJetbrains, SiSpring} from "react-icons/si";
+import {SiDotnet, SiC, SiMysql, SiMariadb, SiJetbrains, SiSpring, SiTypescript} from "react-icons/si";
 import {AiOutlineCode} from "react-icons/ai";
 import {VscVscode} from "react-icons/vsc";
 import {TbBrandCSharp} from "react-icons/tb";
@@ -105,6 +105,14 @@ export const skillsDetials: SkillsDetailsProps[] = [
         skillType: SkillType.Database,
         icon: SiMariadb,
         bgColor: "bg-[#ba7257]"
+    },
+    {
+        id: 13,
+        title: "TypeScript",
+        description: "TypeScript is a superset of JavaScript that adds optional static typing. I use TypeScript over JavaScript in my projects because it makes my code more consistent.",
+        skillType: SkillType.Language,
+        icon: SiTypescript,
+        bgColor: "bg-[#007ACC]"
     }
     ];
 

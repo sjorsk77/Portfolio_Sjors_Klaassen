@@ -45,6 +45,15 @@ main > div {
   h2 {
       @apply text-lg 2xl:text-xl;
   }
+
+  button {
+    @apply bg-buttonBg text-buttonText
+    px-4 py-2 rounded-full shadow-md hover:bg-opacity-85;
+  }
+
+  .link {
+    @apply hover:text-buttonBg;
+  }
 }
 
 

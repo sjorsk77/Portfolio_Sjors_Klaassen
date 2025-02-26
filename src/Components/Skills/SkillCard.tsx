@@ -21,7 +21,7 @@ export const SkillCard: React.FC<SkillsDetailsProps> = ({id, title, description,
             className={`w-full rounded overflow-hidden shadow-lg ${bgColor} cursor-pointer shadow-black shadow-md hover:scale-105 transition-all duration-300 group`}
             onClick={toggleExpand}
         >
-            <div className="flex justify-between p-4 flex-row items-center gap-5">
+            <div className="flex justify-between flex-row items-center gap-5">
                 <h2 className="font-bold text-gray-900">{title}</h2>
                 <Icon size={32} className="text-gray-900"/>
             </div>
@@ -33,7 +33,7 @@ export const SkillCard: React.FC<SkillsDetailsProps> = ({id, title, description,
                 className={`transition-all duration-500 overflow-hidden`} // Adjust duration as needed
             >
                 <div>
-                    <p className="p-4 text-gray-900">{description}</p>
+                    <p className="mt-3 text-gray-900">{description}</p>
                 </div>
             </div>
         </button>

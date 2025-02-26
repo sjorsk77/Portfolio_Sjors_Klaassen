@@ -1,6 +1,6 @@
 import React from "react";
 import {FaEnvelope, FaLinkedin, FaPhone} from "react-icons/fa";
-import {EmailIcon, LinkedInIcon, PhoneIcon} from "./Socials";
+import {EmailIcon, GitHubIcon, LinkedInIcon, PhoneIcon} from "./Misc/Socials";
 
 export const Footer: React.FC = () => {
     return (
@@ -9,6 +9,7 @@ export const Footer: React.FC = () => {
                 <EmailIcon/>
                 <PhoneIcon/>
                 <LinkedInIcon/>
+                <GitHubIcon/>
             </div>
             <p className="text-sm opacity-50">Copyright © {new Date().getFullYear()} - Sjors Klaassen</p>
         </footer>

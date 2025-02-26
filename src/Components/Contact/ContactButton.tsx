@@ -39,7 +39,7 @@ export const ContactButton: React.FC<ContactFormProps> = () => {
             <button
                 ref={buttonRef}
                 onClick={toggleForm}
-                className="fixed bottom-5 right-5 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-400 focus:outline-none"
+                className="fixed bottom-5 right-5 p-4 text-white rounded-full shadow-lg focus:outline-none"
             >
                 <FaRegCommentDots size={24} />
             </button>

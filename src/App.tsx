@@ -13,7 +13,7 @@ const App: React.FC = () => {
 
     return (
         <div>
-        <div className='flex overflow-x-hidden justify-between px-5 md:px-20 flex-col min-h-screen bg-[#EEF2FF] dark:bg-gray-900 dark:text-white font-montserrat gap-y-10'>
+        <div className='flex overflow-x-hidden justify-between px-5 md:px-20 flex-col min-h-screen bg-light-bg dark:bg-dark-bg dark:text-white font-montserrat gap-y-10'>
             <ThemeProvider>
                 <Router>
                     <NavBar />
