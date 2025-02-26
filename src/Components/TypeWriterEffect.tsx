@@ -32,7 +32,7 @@ export const TypewriterEffect: React.FC<Props> = ({ input, typingSpeed }) => {
 
     return (
         <div className="flex justify-center items-center bg-none">
-            <h1 className="text-4xl font-mono">
+            <h1 className="font-mono">
                 {text}
                 {!isFinished && <span className="caret blink inline-block">|</span>}
             </h1>

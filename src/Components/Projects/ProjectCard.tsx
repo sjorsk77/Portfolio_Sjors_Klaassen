@@ -22,10 +22,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     return (
         <Link
             to={`/project/${project.id}`}
-            className="group relative block rounded-lg overflow-hidden"
+            className="group  rounded-lg overflow-hidden"
         >
             <div
-                className=" bg-cover bg-center transition-transform h-64 w-96"
+                className="bg-cover bg-center transition-transform h-64 md:w-96"
                 style={{
                     backgroundImage: `url(${project.thumbnail})`,
                 }}

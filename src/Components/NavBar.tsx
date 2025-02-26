@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useTheme } from "./ThemeContext";
 import { ThemeToggle } from "./ThemeToggle";
 import {pages} from "../Data/Pages";
-import {EmailIcon, PhoneIcon} from "./Socials";
+import {EmailIcon, GitHubIcon, LinkedInIcon, PhoneIcon} from "./Misc/Socials";
 
 export const NavBar: React.FC = () => {
     const { theme, toggleTheme } = useTheme();
@@ -41,7 +41,7 @@ export const NavBar: React.FC = () => {
                         .filter(page => page.isOnNavigation)
                         .map(page => (
                             <li key={page.path}>
-                                <Link to={page.path} className="font-extrabold hover:text-blue-500 dark:hover:text-blue-300 transition duration-300">{page.name}</Link>
+                                <Link to={page.path} className="font-extrabold link transition duration-300">{page.name}</Link>
                             </li>
                         ))}
                 </ul>
@@ -96,6 +96,8 @@ export const NavBar: React.FC = () => {
                     <div className={"flex flex-row w-fit gap-5"}>
                         <PhoneIcon/>
                         <EmailIcon/>
+                        <LinkedInIcon/>
+                        <GitHubIcon/>
                     </div>
                     <ThemeToggle/>
                 </div>

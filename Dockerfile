@@ -1,10 +1,10 @@
-# Use the official Node.js image
+# Stage 1: Build the React app
 FROM node:20.14.0 AS build
 
 # Set the working directory
 WORKDIR /app
 
-# Clean the npm cache
+# Clean npm cache
 RUN npm cache clean --force
 
 # Copy package.json and package-lock.json
@@ -19,20 +19,17 @@ COPY . .
 # Build the React app
 RUN npm run build
 
-# Use a lightweight image to serve the app
-FROM node:20.14.0
-
-# Set the working directory
-WORKDIR /app
+# Stage 2: Set up NGINX to serve the build
+FROM nginx:alpine
 
 # Copy the build output from the previous stage
-COPY --from=build /app/build ./build
+COPY --from=build /app/build /usr/share/nginx/html
 
-# Install serve globally
-RUN npm install -g serve
+# Copy the custom NGINX config file
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose port 80
 EXPOSE 80
 
-# Command to run the app
-CMD ["serve", "-s", "build", "-l", "80"]
+# Start NGINX in the foreground (daemon off)
+CMD ["nginx", "-g", "daemon off;"]

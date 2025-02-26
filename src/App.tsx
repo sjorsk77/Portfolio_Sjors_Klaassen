@@ -1,7 +1,5 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import { PageNotFound } from './Pages/PageNotFound';
 import { NavBar } from './Components/NavBar';
 import { Footer } from './Components/Footer';
 import { ThemeProvider } from './Components/ThemeContext';
@@ -14,7 +12,8 @@ const App: React.FC = () => {
 
 
     return (
-        <div className='flex px-5 md:px-20 flex-col min-h-screen bg-white dark:bg-gray-900 dark:text-white font-montserrat gap-y-10'>
+        <div>
+        <div className='flex overflow-x-hidden justify-between px-5 md:px-20 flex-col min-h-screen bg-light-bg dark:bg-dark-bg dark:text-white font-montserrat gap-y-10'>
             <ThemeProvider>
                 <Router>
                     <NavBar />
@@ -25,10 +24,12 @@ const App: React.FC = () => {
                                 ))}
                             </Routes>
                         </Suspense>
-                    <ContactButton />
+
                     <Footer />
                 </Router>
             </ThemeProvider>
+        </div>
+            <ContactButton />
         </div>
     );
 };
