@@ -1,6 +1,3 @@
-import img from "../../public/assets/images/Portret.jpg"
-
-
 export const ProjectsIntroduction = "On this page you can find all the projects I have worked on. Click on a project to see more details.";
 
 export const ProjectsDetails = [
@@ -31,7 +28,7 @@ export const ProjectsDetails = [
     {
         id: 2,
         title: "PantryPro",
-        shortDescription: "This was a school project in which I created a web app called PantryPro. PantryPro was created to help people keep track of their pantry items. It is a full stack application that uses a MySQL database, a SpringBoot backend and a React frontend.",
+        shortDescription: "This was a school project. In this project I learned Java using Springboot and improved my overall software skills.",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus blandit sollicitudin dictum. Nullam non urna a nunc ullamcorper finibus non at lacus. Vestibulum vitae lacinia dolor. Morbi sed orci congue, aliquam tellus ut, suscipit felis. Pellentesque justo urna, sagittis eget euismod id, blandit viverra tortor. Quisque non nibh augue. Donec eget tempus tortor, ut pharetra ante. Vestibulum sit amet scelerisque lectus. Quisque vehicula ligula vitae pellentesque fringilla. Vivamus ultrices a metus id varius. Fusce dolor lectus, elementum a mi eget, iaculis pretium purus.",
         thumbnail: "/assets/images/main_logo.png",
         startDate: "25-01-2025",
