@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import theme from "tailwindcss/defaultTheme";
-import {useTheme} from "../ThemeContext";
 
 interface Project {
     id: number;
@@ -16,16 +14,13 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-    const { theme, toggleTheme } = useTheme();
-
-
     return (
         <Link
             to={`/project/${project.id}`}
-            className="group  rounded-lg overflow-hidden"
+            className="group rounded-lg overflow-hidden"
         >
             <div
-                className="bg-cover bg-center transition-transform h-64 md:w-96"
+                className="bg-cover bg-center transition-transform h-64 w-96"
                 style={{
                     backgroundImage: `url(${project.thumbnail})`,
                 }}

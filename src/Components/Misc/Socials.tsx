@@ -23,7 +23,7 @@ export const LinkedInIcon = () => {
     return (
         <a href="https://www.linkedin.com/in/sjors-klaassen/" target="_blank" rel="noopener noreferrer"
            className="flex items-center gap-2 hover:wiggle">
-            <FaLinkedin size={24} color={"#0077B5"}/>
+            <FaLinkedin size={24}/>
         </a>
     )
 }

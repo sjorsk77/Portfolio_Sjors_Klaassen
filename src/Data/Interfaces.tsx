@@ -1,5 +1,5 @@
 import {IconType} from "react-icons";
-import {SkillType} from "./Enums";
+import {SkillType, SkillLevel} from "./Enums";
 export interface PageProps {
     path: string;
     component: JSX.Element;
@@ -26,6 +26,7 @@ export interface SkillsDetailsProps {
     title: string;
     description: string;
     skillType: SkillType;
+    skillLevel: SkillLevel;
     icon : IconType;
     bgColor: string;
 }

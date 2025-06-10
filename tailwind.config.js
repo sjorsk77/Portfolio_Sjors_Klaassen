@@ -7,6 +7,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        grow_width: {
+          '0%': { width: '0%' },
+          '100%': { transform: '100%' },
+        },
+        stretch_x: {
+            '0%': { transform: 'scaleX(0)' },
+            '100%': { transform: 'scaleX(1)' },
+        }
+      },
+      animation: {
+        grow_width: 'grow_width 0.5s ease-in-out',
+        stretch_x: 'stretch_x 0.5s ease-in-out',
+      },
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
         'orbitron': ['Orbitron', 'sans-serif'],
@@ -39,6 +53,6 @@ module.exports = {
     },
   },
   safelist: [
-    { pattern: /w-\[.*\]/ }, // Allow arbitrary width values
+    { pattern: /w-\[.*]/ }, // Allow arbitrary width values
   ],
 }

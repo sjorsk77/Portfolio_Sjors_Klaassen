@@ -5,3 +5,11 @@ export enum SkillType {
     Database = "Databases",
     Tool = "Tools",
 }
+
+export enum SkillLevel {
+    Novice = "Novice",
+    Familiar = "Familiar",
+    Competent = "Competent",
+    Advanced = "Advanced",
+    Expert = "Expert",
+}
