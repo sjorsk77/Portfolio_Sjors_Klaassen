@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build React app
-        run: npm run build
+        run: CI=false npm run build
 
       - name: Copy files to Pi
         uses: appleboy/scp-action@v0.1.5
